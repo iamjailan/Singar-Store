@@ -4,7 +4,7 @@
 }
 .navbar {
     display: flex;
-    height: 100px;
+    height: 80px;
     justify-content: space-around;
     align-items: center;
     box-shadow: 3px 1px 8px rgba(0, 0, 0, 0.4);
@@ -19,9 +19,11 @@
 .navbar h1 {
     color: var(--clr-logo);
 }
-.navbar .navbar-menu ul li,a {
+a {
     cursor: pointer;
     color: var(--clr-small);
+    text-decoration: none;
+    font-weight: 600;
 }
 .footer {
     display: flex;
@@ -31,4 +33,56 @@
     padding: 20px;
     background-color: black;
     color: #fff;
+}
+.active-links {
+    color: red;
+}
+.home-page {
+    display: flex;
+    height: 80vh;
+    width: 100%;
+    background: url("../../../public/1.png");
+    /* background-color: khaki; */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.home-card {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    width: 500px;
+}
+.home-card h1 {
+    font-size: 3rem;
+    margin: 10px 0px;
+}
+.red {
+    color: red;
+}
+.home-card p {
+    font-size: 18px;
+}
+.home-button {
+    padding: 10px 30px;
+    width: 50px;
+    text-align: center;
+    background-color: red;
+    color: #fff;
+    margin-top: 30px;
+    border-radius: 5px;
+}
+.home-explore {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.home-explore h1 {
+    font-size: 4rem;
+}
+.underline {
+    border-bottom: 4px solid red;
+    margin-top: 30px;
+    width: 130px;
 }
