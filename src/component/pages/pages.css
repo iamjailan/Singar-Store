@@ -1,0 +1,25 @@
+:root {
+    --clr-logo: hsl(164, 7%, 30%);
+    --clr-small: rgb(115, 90, 90);
+}
+.navbar {
+    display: flex;
+    height: 100px;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 3px 1px 8px rgba(0, 0, 0, 0.4);
+}
+.navbar .navbar-menu ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    width: 500px;
+}
+.navbar h1 {
+    color: var(--clr-logo);
+}
+.navbar .navbar-menu ul li,a {
+    cursor: pointer;
+    color: var(--clr-small);
+}
