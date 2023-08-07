@@ -17,7 +17,7 @@ export const data = [
         id:3,
         name: "Baby Clothes",
         category: "Fashion",
-        image: "1.jfif",
+        image: "baby.jpg",
         desc: "Welcome to our adorable world of baby clothes! Discover the cutest and coziest outfits to dress your little ones with love and care. Our collection showcases a delightful assortment of baby apparel, featuring soft fabrics, playful designs, and utmost comfort for your precious bundles of joy."
     }
 ]

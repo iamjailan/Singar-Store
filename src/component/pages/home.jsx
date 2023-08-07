@@ -9,7 +9,8 @@ export default function Home(){
     const cardEl = list.map(item => {
         const {id, name, category, desc, image} = item
         return (
-            <div className="cards-lists" key={id}>
+            <Link to="/lists" className="home-link">
+            <div className="cards-lists" key={item.id}>
                 <img src={image} className="home-image" />
                 <div className="home-desc">
                     <div className="home-cat">
@@ -19,6 +20,7 @@ export default function Home(){
                     <p>{desc}</p>
                 </div>
             </div>
+            </Link>
         )
     })
     return(
@@ -31,6 +33,20 @@ export default function Home(){
                     <Link to="/products" className="home-button">Shop</Link>
                 </div>
             </main>
+            <div className="statue-list">
+                <h1 className="statue-title">Why us?!</h1>
+                <main className="statue-cards">
+                    <div className="statue-card">
+                        <h1>9786 Active Customer</h1>
+                    </div>
+                    <div className="statue-card">
+                        <h1>24/7 Services</h1>
+                    </div>
+                    <div className="statue-card">
+                        <h1>34 Branches</h1>
+                    </div>
+                </main>
+            </div>
             <div className="home-explore">
                 <h1>Explores our Lists</h1>
                 <p className="underline"></p>
