@@ -8,6 +8,7 @@ import Product from "./pages/products/product";
 import Pricing from "./pages/pricing/pricing";
 import Lists from "./pages/lists/lists";
 import Help from "./pages/help/help";
+import NotFound from "./pages/NotFound";
 
 
 export default function App(){
@@ -21,6 +22,7 @@ export default function App(){
                     <Route path="pricing" element={<Pricing />} />
                     <Route path="lists" element={<Lists />} />
                     <Route path="help" element={<Help />} />
+                    <Route path="*" element={<NotFound />} />
                 </Route>
             </Routes>
         </BrowserRouter>
