@@ -6,10 +6,10 @@ export default function Product(){
         <section className="products">
             <div className="product-land">
                 <div className="product-wel">
-                    <h1>Git 5% Cash</h1>
+                    <h1>Get 5% Cash</h1>
                     <h1>On every single Product</h1>
                     <p>From stylish fashion accessories to state-of-the-art gadgets, we have something for everyone. Browse through our collection and find the perfect item to enhance your lifestyle. Happy shopping!</p>
-                    <Link className="learn-btn">Learn More</Link>
+                    <Link className="learn-btn" to="/help">Learn More</Link>
                 </div>
             </div>
             <main className="discount">
