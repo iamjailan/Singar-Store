@@ -288,3 +288,149 @@ a {
     color: #fff;
     border-radius: 5px;
 }
+.product-land{
+    background: url("../../../public/products.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.product-wel {
+    padding: 40px;
+    background-color: var(--clr-logo);
+    color: #fff;
+    border-radius: 5px;
+    margin-left: 20px;
+    width: 500px;
+}
+.product-wel h1 {
+    font-size: 3rem;
+    margin-top: 10px;
+}
+.product-wel p {
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.product-wel a {
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    margin-top: 20px;
+    color: #fff;
+    transition: all 0.5s;
+}
+.product-wel a:hover {
+    background-color: #fff;
+    color: #000;
+}
+@media screen and (max-width: 768px){
+    .product-land {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .product-wel {
+        width: 350px;
+    }
+}
+.discount {
+    padding: 20px;
+}
+
+.discount-title {
+    font-size: 2rem;
+}
+.discount-cards {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+.discount-card {
+    padding: 10px;
+    background-color: lightcyan;
+    margin: 0px 5px;
+    border-radius: 10px;
+}
+.discount-card.first .discount-price {
+    color: blueviolet;
+}
+.discount-card.first .discount-save {
+    color: royalblue;
+}
+.discount-card.first .discount-text {
+    color: rgb(16, 16, 150);
+}
+.discount-card.second .discount-price {
+    color: rgb(112, 80, 5);
+}
+.discount-card.second .discount-save {
+    color: rgb(86, 125, 241);
+}
+.discount-card.second .discount-text {
+    color:red;
+}
+.discount-card.third .discount-price {
+    color: rgb(200, 25, 92);
+}
+.discount-card.third .discount-save {
+    color: rgb(179, 0, 164);
+}
+.discount-card.third .discount-text {
+    color: rgb(255, 255, 255);
+}
+.discount-card.fourth .discount-price {
+    color: rgb(242, 129, 173);
+}
+.discount-card.fourth .discount-save {
+    color: rgb(3, 255, 3);
+}
+.discount-card.fourth .discount-text {
+    color: rgb(0, 0, 0);
+}
+.discount-card.fourth {
+    background-color: lightgoldenrodyellow;
+}
+.discount-card.third {
+    background-color: lightslategrey;
+}
+.discount-card.second {
+    background-color: rgb(131, 186, 241);
+}
+.discount-title {
+    margin: 10px 0px;
+}
+@media screen and (max-width: 1024px){
+    .discount-cards {
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+    .discount-card {
+        margin-top: 10px;
+    }
+}
+@media screen and (max-width: 768px){
+    .discount-cards {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+}
+@media screen and (max-width: 550px){
+    .discount-cards {
+        display: flex;
+        flex-direction: column;
+    }
+    .product-wel {
+        height: 300px;
+        width: 200px;
+    }
+    .product-land {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .product-wel h1 {
+        font-size: 1rem;
+    }
+}
