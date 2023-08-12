@@ -4,11 +4,11 @@ import "./pages/pages.css"
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import SharedLayout from "./pages/sharedLayout";
 import Home from "./pages/home";
-import Product from "./pages/products/product";
 import Pricing from "./pages/pricing/pricing";
 import Lists from "./pages/lists/lists";
 import Help from "./pages/help/help";
 import NotFound from "./pages/NotFound";
+import Product from "./pages/products/product-page";
 
 
 export default function App(){

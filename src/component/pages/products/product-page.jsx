@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import FilterProduct from "./filter";
 
 export default function Product(){
     return (
@@ -37,6 +38,7 @@ export default function Product(){
                     </div>
                 </div>
             </main>
+            <FilterProduct />
         </section>
     )
 }
