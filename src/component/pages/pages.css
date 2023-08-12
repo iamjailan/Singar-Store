@@ -482,3 +482,31 @@ a {
         font-size: 1rem;
     }
 }
+.product-image img {
+    width: 300px;
+    height: 250px;
+    border-radius: 5px;
+}
+.product-card {
+    padding: 20px;
+    width: 300px;
+    box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.4);
+    margin: 5px;
+    margin: 10px 0px;
+}
+.product-details {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+.product-details span {
+    color: rgba(0, 0, 0, 0.7);
+    text-decoration: line-through;
+}
+.all-products {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
