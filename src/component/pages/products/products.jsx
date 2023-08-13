@@ -1,6 +1,6 @@
 import React from "react";
 import productData from "./product-data";
-import { useSearchParams } from "react-router-dom";
+import { Link, NavLink, useSearchParams } from "react-router-dom";
 
 export default function Products(){
     const [products, setProducts] = React.useState(productData)
@@ -14,6 +14,7 @@ export default function Products(){
         const {image, name, price, discountPrice, id} = product
         return (
             <main className="product-card" key={id}>
+            <NavLink  state={{ search: `?${searchProduct.toString()}`, type: typeFilter}} to={`${id}`}>
                 <section className="product-image">
                     <img src={image} />
                 </section>
@@ -21,6 +22,10 @@ export default function Products(){
                     <h1>{name}</h1>
                     <h1><span>{price}</span> / {discountPrice}</h1>
                 </div>
+            </NavLink>
+                <div className="product-card-btn">
+                    <button>Add to Bag</button>
+                 </div>
             </main>
         )
     })
@@ -36,7 +41,7 @@ export default function Products(){
                 <li onClick={() => setSearchProduct({type: "mobiles"})}>Mobiles</li>
                 <li onClick={() => setSearchProduct({type: "home-appliance"})}>Home Appliance</li>
                 <li onClick={() => setSearchProduct({type: "office-appliance"})}>Office Appliance</li>
-                <li onClick={() => setSearchProduct({type: "kitchen-appliance"})}>Kitchen Appliance</li>
+                <li onClick={() => setSearchProduct({type: "afghani"})}>Afghani Clothes</li>
                 <li onClick={() => setSearchProduct({type: "other"})}>Other</li>
                 {typeFilter ? <li onClick={() => setSearchProduct({})} >clear filter</li> : null}
             </ul>

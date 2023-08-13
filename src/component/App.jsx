@@ -9,6 +9,7 @@ import Lists from "./pages/lists/lists";
 import Help from "./pages/help/help";
 import NotFound from "./pages/NotFound";
 import Product from "./pages/products/product-page";
+import SingleProduct from "./pages/products/single-product";
 
 
 export default function App(){
@@ -19,6 +20,7 @@ export default function App(){
                 <Route path="/" element={<SharedLayout />}>
                     <Route index element={<Home />} />
                     <Route path="products" element={<Product />} />
+                    <Route path="products/:id" element={<SingleProduct />} />
                     <Route path="pricing" element={<Pricing />} />
                     <Route path="lists" element={<Lists />} />
                     <Route path="help" element={<Help />} />
