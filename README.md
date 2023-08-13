@@ -1,6 +1,6 @@
-# E-Commerce Website - React.js
+# Singar Store Website - React.js
 
-Welcome to our E-Commerce website project, built using React.js and a blend of custom CSS and cutting-edge technologies. This README will guide you through the project setup, features, and how to contribute.
+Welcome to our Singar Store website project, built using React.js and a blend of custom CSS and cutting-edge technologies. This README will guide you through the project setup, features, and how to contribute.
 
 ## Getting Started
 
@@ -14,7 +14,7 @@ Follow these steps to get the project up and running on your local machine:
 
 ## Features
 
-Our E-Commerce website is designed to provide an intuitive and seamless shopping experience. Some key features include:
+Our Singar Store website is designed to provide an intuitive and seamless shopping experience. Some key features include:
 
 - Browse and search for a wide range of products.
 - User authentication and secure login/registration.
@@ -30,7 +30,7 @@ Our E-Commerce website is designed to provide an intuitive and seamless shopping
 
 ## Contributing
 
-We welcome contributions from the community to enhance our E-Commerce website. To contribute:
+We welcome contributions from the community to enhance our Singar Store website. To contribute:
 
 1. Fork the repository.
 2. Create a new branch: `git checkout -b feature/add-new-feature`
