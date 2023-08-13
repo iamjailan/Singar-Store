@@ -35,6 +35,19 @@ a {
     background-color: black;
     color: #fff;
 }
+.footer-social {
+    padding: 20px;
+    width: 100%;
+}
+.footer-social ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.footer-social ul a {
+    color: #fff;
+    font-size: 20px;
+}
 .active-links {
     color: red;
 }

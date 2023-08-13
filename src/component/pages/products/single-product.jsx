@@ -6,12 +6,28 @@ export default function SingleProduct(){
     const {id} = useParams()
     const [data, setData] = React.useState(productData)
     const location = useLocation()
+    const [count, setCount] = React.useState(1)
 
     const search = location.state?.search || ""
     const type = location.state?.type || "all"
 
     const productId = id
     const productFilter = data.find(product => product.id == productId)
+
+    let cartAmount = 1;
+
+    function decCart(){
+        setCount(count - 1)
+        if(count <= 1){
+            setCount(1)
+        }
+    }
+    function incCart(){
+        setCount(count + 1)
+        if(count >= 10){
+            setCount(10)
+        }
+    }
 
     return (
         <div className="all-card">
@@ -33,9 +49,9 @@ export default function SingleProduct(){
                     </div>
                     <p className="single-text">{productFilter.text}</p>
                     <div className="single-btn">
-                        <button className="cart-amount-btn">-</button>
-                        <button className="cart-amount-btn">1</button>
-                        <button className="cart-amount-btn">+</button>
+                        <button className="cart-amount-btn" onClick={decCart}>-</button>
+                        <button className="cart-amount-btn">{count}</button>
+                        <button className="cart-amount-btn" onClick={() => incCart()}>+</button>
                         <button className="add-to-cart">Add to Bag</button>
                     </div>
                 </div>
