@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import productData from "./product-data";
 import { Link, NavLink, useSearchParams } from "react-router-dom";
 import { useCart } from "react-use-cart";
@@ -7,7 +7,6 @@ import ProductCards from "./productCard";
 export default function Products(){
     const [products, setProducts] = React.useState(productData)
     const [searchProduct, setSearchProduct] = useSearchParams()
-    const { addItem } = useCart()
 
     const typeFilter = searchProduct.get("type")
 
@@ -29,18 +28,15 @@ export default function Products(){
                 {typeFilter ? <li onClick={() => setSearchProduct({})} >clear filter</li> : null}
             </ul>
         </section>
-        <section className="all-products">
+        <section className="all-products" id="all-pro">
             {
                 displayFilter.map((item, index) => {
                     return (
-                            <ProductCards 
-                                image={item.image}
-                                name={item.name}
-                                price={item.price}
-                                discountPrice={item.discountPrice}
+                            <ProductCards
+                                {...item}
+                                id={item.id}
                                 item={item}
                                 key={item.id}
-                                id={item.id}
                             />
                     )
                 })

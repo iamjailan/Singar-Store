@@ -810,4 +810,25 @@ a {
     .bag-card h1, button, img  {
         padding: 10px 0px;
     }
+    .bag-total {
+        justify-content: space-between;
+    }
+    .bag-total h1 {
+        font-size: .5rem;
+    }
+    .bag-total .clear-bag {
+        padding: 10px;
+        font-size: .5rem;
+        font-weight: 100;
+    }
+}
+.visit-my-bag {
+    padding: 20px 0px;
+    height: 100px;
+    position: relative;
+}
+.visit-my-bag a {
+    padding: 20px 0px;
+    color: #000;
+    position: absolute;
 }

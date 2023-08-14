@@ -12,7 +12,6 @@ import Product from "./pages/products/product-page";
 import SingleProduct from "./pages/products/single-product";
 import { CartProvider } from "react-use-cart";
 
-
 export default function App(){
     return (
         <>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useCart } from "react-use-cart";
 import { NavLink, useSearchParams, useParams } from "react-router-dom"
 
@@ -6,7 +6,6 @@ export default function ProductCards(props, index){
     const { addItem } = useCart()
     const [searchProduct, setSearchProduct] = useSearchParams()
     const typeFilter = searchProduct.get("type")
-    const {id} = useParams()
 
     return (
         <main className="product-card" key={props.id}>

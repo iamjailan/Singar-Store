@@ -1,6 +1,6 @@
 export default [
     {
-        id:0,
+        id: 18,
         name: "Malangi Kochi Dress",
         type: "afghani",
         price: "760",
