@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useLocation, useParams } from "react-router-dom";
 import productData from "./product-data";
 
-export default function SingleProduct(){
+export default function SingleProduct(props){
     const {id} = useParams()
     const [data, setData] = React.useState(productData)
     const location = useLocation()
@@ -31,8 +31,8 @@ export default function SingleProduct(){
 
     return (
         <div className="all-card">
-            <Link className="back-btn" to={`..${search}`} relative="path">&larr;back to {type}</Link>
-            <main className="single-product-page">
+            <Link className="back-btn" to={`..${search}`} relative="path">&larr; back to {type} products</Link>
+            <main className="single-product-page" key={productFilter.id}>
                 <section className="product-images">
                     <img src={`/${productFilter.image}`} />
                     <div className="products-images">

@@ -1,34 +1,17 @@
 import React from "react";
 import productData from "./product-data";
 import { Link, NavLink, useSearchParams } from "react-router-dom";
+import { useCart } from "react-use-cart";
+import ProductCards from "./productCard";
 
 export default function Products(){
     const [products, setProducts] = React.useState(productData)
-    const [filter, setFilter] = React.useState(false)
     const [searchProduct, setSearchProduct] = useSearchParams()
+    const { addItem } = useCart()
 
     const typeFilter = searchProduct.get("type")
-    const displayFilter = typeFilter ? products.filter(item => item.type === typeFilter) : products
 
-    const productsEl = displayFilter.map(product => {
-        const {image, name, price, discountPrice, id} = product
-        return (
-            <main className="product-card" key={id}>
-            <NavLink  state={{ search: `?${searchProduct.toString()}`, type: typeFilter}} to={`${id}`}>
-                <section className="product-image">
-                    <img src={image} />
-                </section>
-                <div className="product-details">
-                    <h1>{name}</h1>
-                    <h1><span>{price}</span> / {discountPrice}</h1>
-                </div>
-            </NavLink>
-                <div className="product-card-btn">
-                    <button>Add to Bag</button>
-                 </div>
-            </main>
-        )
-    })
+    const displayFilter = typeFilter ? products.filter(item => item.type === typeFilter) : products
     return (
         <div>
 
@@ -47,7 +30,21 @@ export default function Products(){
             </ul>
         </section>
         <section className="all-products">
-            {productsEl}
+            {
+                displayFilter.map((item, index) => {
+                    return (
+                            <ProductCards 
+                                image={item.image}
+                                name={item.name}
+                                price={item.price}
+                                discountPrice={item.discountPrice}
+                                item={item}
+                                key={item.id}
+                                id={item.id}
+                            />
+                    )
+                })
+            }
         </section>
         </div>
     )

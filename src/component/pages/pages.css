@@ -202,6 +202,8 @@ a {
     }
     .svg {
         height: 30px;
+        color: black;
+        font-size: 25px;
     }
     .hide-bar {
         display: none;
@@ -536,11 +538,17 @@ a {
 }
 .product-card-btn button {
     padding: 10px;
-    border: 2px solid green;
+    border: 2px solid lime;
     background-color: transparent;
     border-radius: 5px;
     cursor: pointer;
     width: 100%;
+    transition: .6s;
+    font-weight: 600;
+}
+.product-card-btn button:hover {
+    background-color: lime;
+    color: #fff;
 }
 .single-product-page {
     display: flex;
@@ -693,5 +701,113 @@ a {
     .products-images img {
         height: 130px;
         width: 130px;
+    }
+}
+.bag-lists {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.bag-card {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.6);
+    margin: 20px 0px;
+}
+.bag-card .bag-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+}
+.bag-details {
+    padding: 20px;
+}
+.bag-card h1 {
+    font-size: 1rem;
+    padding: 5px 0px;
+}
+.bag-btn {
+    display: flex;
+}
+.bag-btn button {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid blueviolet;
+    border-radius: 5px;
+    margin: 0px 5px;
+    transition: .6s;
+}
+.bag-btn button:hover {
+    background-color: blueviolet;
+    color: #fff;
+}
+.bag-remove {
+    background-color: transparent;
+    border: 2px solid red;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: .6s;
+}
+.bag-remove:hover {
+    background-color: red;
+    color: #fff;
+}
+.bag-total {
+    display: flex;
+    padding: 50px;
+    align-items: center;
+    justify-content: space-around;
+}
+.bag-total h1 {
+    font-size: 1.3rem;
+}
+.clear-bag {
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: 2px solid red;
+    background-color: transparent;
+    cursor: pointer;
+    font-weight: 600;
+    transition: .6s;
+}
+.clear-bag:hover {
+    background-color: red;
+    color: #fff;
+}
+.empty-bag {
+    height: 71.3vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.empty-bag a {
+    padding: 10px 30px;
+    border-radius: 4px;
+    border: 3px solid lime;
+    margin-top: 30px;
+    color: #000;
+    transition: .6s;
+}
+.empty-bag a:hover {
+    background-color: lime;
+    color: #fff;
+}
+.product-black {
+    color: #000;
+}
+@media screen and (max-width: 768px){
+    .bag-card {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .bag-card h1, button, img  {
+        padding: 10px 0px;
     }
 }
