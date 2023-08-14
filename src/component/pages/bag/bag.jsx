@@ -17,7 +17,7 @@ export default function Bag(){
         return (
             <div className="empty-bag">
                 <h1>Your Bag is Empty</h1>
-                <Link to="/products">Go to Products</Link>
+                <Link to="/products">Return to Products</Link>
             </div>
         )
     }

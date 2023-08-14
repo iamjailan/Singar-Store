@@ -1,6 +1,8 @@
 import React from "react";
 import { Link, useLocation, useParams } from "react-router-dom";
 import { useCart } from "react-use-cart";
+import { RiArrowGoBackLine } from "react-icons/ri"
+import { FaLongArrowAltRight } from "react-icons/fa"
 
 export default function SingleCardPro(props, index){
     const location = useLocation()
@@ -36,7 +38,7 @@ export default function SingleCardPro(props, index){
 
     return (
         <div className="all-card">
-            <Link className="back-btn" to={`..${search}`} relative="path">&larr; back to {type} products</Link>
+            <Link className="back-btn" to={`..${search}`} relative="path"><RiArrowGoBackLine className="back-btn-icon" /> back to {type} products</Link>
             <main className="single-product-page" key={props.id}>
                 <section className="product-images">
                     <img src={`/${props.image}`} />
@@ -62,7 +64,7 @@ export default function SingleCardPro(props, index){
                                 <h1>Your Bag is now empty</h1>
                             </div> : null
                         }
-                        <Link to="/bag">Visit My Bag &rarr;</Link>
+                        <Link to="/bag" >Visit My Bag <FaLongArrowAltRight className="icon" /></Link>
                     </div>
                 </div>
             </main>

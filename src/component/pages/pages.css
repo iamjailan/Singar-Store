@@ -615,6 +615,11 @@ a {
 .back-btn {
     color: #000;
     padding: 20px;
+    display: flex;
+    align-items: center;
+}
+.back-btn-icon {
+    margin-right: 5px;
 }
 @media screen and (max-width: 1024px){
     .all-products {
@@ -831,4 +836,10 @@ a {
     padding: 20px 0px;
     color: #000;
     position: absolute;
+    display: flex;
+    align-items: center;
+}
+.visit-my-bag a .icon {
+    margin-left: 10px;
+    font-size: 20px;
 }
