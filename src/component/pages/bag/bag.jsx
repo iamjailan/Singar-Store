@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useCart } from "react-use-cart";
 import { Link } from "react-router-dom"
+import { AiFillDelete, AiOutlineClear } from "react-icons/ai"
  
 export default function Bag(){
     const {
@@ -40,7 +41,7 @@ export default function Bag(){
                     </div>
                     <h1 className="bag-price">Item Total: ${item.itemTotal}</h1>
                     <h1 className="bag-price">Item Quantity: {item.quantity}</h1>
-                    <button className="bag-remove" onClick={() => removeItem(item.id)}>Remove</button>
+                    <button className="bag-remove" onClick={() => removeItem(item.id)}><AiFillDelete /></button>
                 </div>
             )
             })}
@@ -48,7 +49,7 @@ export default function Bag(){
            <section className="bag-total">
                 <h1>Total Items: {totalItems}</h1>
                 <h1>Total Price: ${cartTotal}</h1>
-                <button className="clear-bag" onClick={() => emptyCart()}>Clear Cart</button>
+                <button className="clear-bag" onClick={() => emptyCart()}><AiOutlineClear /></button>
            </section>
         </main>
     )

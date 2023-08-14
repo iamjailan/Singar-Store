@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useCart } from "react-use-cart";
 import { NavLink, useSearchParams, useParams } from "react-router-dom"
 
-export default function ProductCards(props, index){
+export default function ProductCards(props, index, handleMessage){
     const { addItem } = useCart()
     const [searchProduct, setSearchProduct] = useSearchParams()
     const typeFilter = searchProduct.get("type")
@@ -19,7 +19,7 @@ export default function ProductCards(props, index){
                 </div>
             </NavLink>
                 <div className="product-card-btn">
-                    <button onClick={() => addItem(props.item)}>Add to Bag</button>
+                    <button onClick={() => {addItem(props.item); props.handleMessage()}}>Add to Bag</button>
                  </div>
             </main>
     )

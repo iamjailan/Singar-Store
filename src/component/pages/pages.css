@@ -26,6 +26,9 @@ a {
     text-decoration: none;
     font-weight: 600;
 }
+.navbar a {
+    font-size: 22px;
+}
 .footer {
     display: flex;
     flex-direction: column;
@@ -611,6 +614,7 @@ a {
 }
 .all-card {
     padding: 10px;
+    position: relative;
 }
 .back-btn {
     color: #000;
@@ -752,15 +756,15 @@ a {
 }
 .bag-remove {
     background-color: transparent;
-    border: 2px solid red;
     border-radius: 4px;
     padding: 10px 20px;
     cursor: pointer;
+    font-size: 30px;
     transition: .6s;
+    border: none;
 }
 .bag-remove:hover {
-    background-color: red;
-    color: #fff;
+    color: red;
 }
 .bag-total {
     display: flex;
@@ -774,15 +778,15 @@ a {
 .clear-bag {
     padding: 10px 30px;
     border-radius: 5px;
-    border: 2px solid red;
+    border: none;
     background-color: transparent;
     cursor: pointer;
     font-weight: 600;
     transition: .6s;
+    font-size: 30px;
 }
 .clear-bag:hover {
-    background-color: red;
-    color: #fff;
+    color: red;
 }
 .empty-bag {
     height: 71.3vh;
@@ -842,4 +846,39 @@ a {
 .visit-my-bag a .icon {
     margin-left: 10px;
     font-size: 20px;
+}
+.added-message {
+    position: fixed;
+    padding: 15px 100px;
+    background-color: lightblue;
+    right: 30px;
+    top: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: lime;
+    transition: .6s;
+}
+.added-message.hide {
+    right: -500px;
+}
+.added-message h1 {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+}
+@media screen  and (max-width: 768px){
+    .added-message h1 {
+        font-size: .8rem;
+    }
+    .added-message {
+        padding: 10px 100px;
+    }
+}
+.nav-total {
+    font-size: 12px;
+    margin-bottom: 10px;
+    position: absolute;
 }

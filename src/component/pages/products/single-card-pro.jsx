@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation, useParams } from "react-router-dom";
 import { useCart } from "react-use-cart";
 import { RiArrowGoBackLine } from "react-icons/ri"
@@ -7,6 +7,7 @@ import { FaLongArrowAltRight } from "react-icons/fa"
 export default function SingleCardPro(props, index){
     const location = useLocation()
     const [count, setCount] = React.useState(1)
+    const [displayMessage, setDisplayMessage] = useState(false)
     const {
         isEmpty,
         totalUniqueItems,
@@ -35,6 +36,12 @@ export default function SingleCardPro(props, index){
             setCount(10)
         }
     }
+    function handleMessage() {
+        setDisplayMessage(prevMessage => !prevMessage)
+        setTimeout(() => {
+            setDisplayMessage(false) 
+        }, 1500)
+    }
 
     return (
         <div className="all-card">
@@ -56,7 +63,7 @@ export default function SingleCardPro(props, index){
                     </div>
                     <p className="single-text">{props.text}</p>
                     <div className="single-btn">
-                        <button className="add-to-cart" onClick={() => addItem(props.item)}>Add to Bag</button>
+                        <button className="add-to-cart" onClick={() => {addItem(props.item); handleMessage()}}>Add to Bag</button>
                     </div>
                     <div className="visit-my-bag">
                         {
@@ -65,6 +72,9 @@ export default function SingleCardPro(props, index){
                             </div> : null
                         }
                         <Link to="/bag" >Visit My Bag <FaLongArrowAltRight className="icon" /></Link>
+                        <div className={displayMessage ? "added-message" : "added-message hide"}>
+                            <h1>Item added to Bag</h1>
+                        </div>
                     </div>
                 </div>
             </main>
