@@ -47,11 +47,11 @@ export default function Navbar(){
             </nav>
             <header className={darkState ? "dark" : null}>
                 <nav className={menu ? "navbar--mobile-height" : "navbar--mobile"}>
-                <div className="navbar-flex">
-                        <h1>Singar Store</h1>
-                        {menu ? <GrClose className="svg" onClick={handleMenu} /> : <CiMenuFries className="svg" onClick={handleMenu} /> }
-                        
-                </div>
+                    <div className="navbar-flex">
+                            <h1>Singar Store</h1>
+                            {menu ? <GrClose className="svg" onClick={handleMenu} /> : <CiMenuFries className="svg" onClick={handleMenu} />}
+                            
+                    </div>
                     <div className={menu ? "show-bar" : "hide-bar"}>
                         <ul>
                             <NavLink to="/" className={({isActive}) => isActive ? "active-links": null}><BiHomeCircle /></NavLink>
