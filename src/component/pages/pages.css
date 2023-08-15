@@ -9,6 +9,7 @@
     justify-content: space-around;
     align-items: center;
     box-shadow: 3px 1px 8px rgba(0, 0, 0, 0.4);
+    transition: .6s;
 }
 .navbar .navbar-menu ul {
     display: flex;
@@ -1029,4 +1030,70 @@ a {
     .about-main .about-text {
         font-size: .8rem;
     }
+}
+.dark {
+    background-color: #111111;
+}
+.dark a {
+    color: #fff;
+}
+.dark .navbar {
+    box-shadow: 3px 5px 7px rgba(255, 255, 255, 1);
+}
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6, .dark p {
+    color: #fff;
+}
+.dark .active-links {
+    color: red;
+}
+.dark .home-page h1 {
+    color: #000;
+}
+.dark .home-page .red {
+    color: red;
+}
+.dark .home-page p {
+    color: #000;
+}
+.dark .cards-lists {
+    box-shadow: rgba(255, 255, 255, 1);
+}
+.dark .desk-link {
+    color: blueviolet;
+}
+.dark .navbar.dark {
+    box-shadow: 3px 5px 7px rgba(255, 255, 255, .9);
+}
+
+.dark .filter-product ul li {
+    background-color: rgba(255, 255, 255, .8);
+    color: #000;
+}
+.dark .filter-product ul li:hover {
+    background-color: #fff;
+}
+.dark .product-card {
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 3px 5px 7px rgba(255, 255, 255, .1);
+}
+.product-card {
+    border-radius: 10px;
+}
+.dark .product-card button {
+    color: #fff;
+}
+.dark .product-details span {
+    color: rgba(255, 255, 255, .5);
+}
+.dark .bag-card {
+    box-shadow: 1px 3px 5px rgba(255, 255, 255, .3);
+}
+.dark .clear-bag {
+    color: #fff;
+}
+.dark .bag-btn button {
+    color: #fff;
+}
+.dark .bag-remove {
+    color: #fff;
 }

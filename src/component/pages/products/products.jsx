@@ -3,11 +3,14 @@ import productData from "./product-data";
 import { Link, NavLink, useSearchParams } from "react-router-dom";
 import { useCart } from "react-use-cart";
 import ProductCards from "./productCard";
+import { useContext } from "react";
+import { ModeContext } from "../modeContext";
 
 export default function Products(){
     const [products, setProducts] = React.useState(productData)
     const [searchProduct, setSearchProduct] = useSearchParams()
     const [displayMessage, setDisplayMessage] = useState(false)
+    const { darkState } = useContext(ModeContext)
 
     const typeFilter = searchProduct.get("type")
 
@@ -23,7 +26,7 @@ export default function Products(){
     }
     return (
         <div>
-            <section className="filter-product">
+            <section className={darkState ? "filter-product dark" : "filter-product"}>
             <h1 className="filter-title">Filter Products</h1>
                 <ul>
                     {typeFilter ? <li onClick={() => setSearchProduct({})}>All</li> : null}

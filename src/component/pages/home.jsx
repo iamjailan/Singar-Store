@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { data } from "./data/listData";
+import { ModeContext } from "./modeContext";
 export default function Home(){
     const [list, setLists] = React.useState([])
+    const { darkState, setDarkState } = useContext(ModeContext)
     React.useEffect(()=>{
         setLists(data)
     }, [])
@@ -24,7 +26,7 @@ export default function Home(){
         )
     })
     return(
-        <div className="home">
+        <div className={darkState ? "home dark" : "home"}>
             <main className="home-page">
                 <div className="home-card">
                     <h1 className="red">Get Up to 20%</h1>

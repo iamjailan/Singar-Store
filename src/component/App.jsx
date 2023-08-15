@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../index.css"
 import "./pages/pages.css"
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -14,11 +14,28 @@ import { CartProvider } from "react-use-cart";
 import HelpNavbar from "./pages/help/help-navbar";
 import About from "./pages/help/about";
 import Contact from "./pages/help/contact";
+import { ModeContext } from "./pages/modeContext"
 
 export default function App(){
+    const [darkState, setDarkState] = React.useState(false)
+    useEffect(() => {
+        const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        setDarkState(darkModeMediaQuery.matches);
+    
+        const handleDarkModeChange = (event) => {
+          setDarkState(event.matches);
+        };
+    
+        darkModeMediaQuery.addListener(handleDarkModeChange);
+    
+        return () => {
+          darkModeMediaQuery.removeListener(handleDarkModeChange);
+        };
+      }, []);
     return (
         <>
         <BrowserRouter>
+        <ModeContext.Provider value={{darkState, setDarkState}}>
             <CartProvider>
                 <Routes>
                     <Route path="/" element={<SharedLayout />}>
@@ -36,6 +53,7 @@ export default function App(){
                     </Route>
                 </Routes>
             </CartProvider>
+        </ModeContext.Provider>
         </BrowserRouter>
         </>
     )

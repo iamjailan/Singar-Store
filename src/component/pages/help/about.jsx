@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ModeContext } from "../modeContext";
 
 export default function About(){
+    const { darkState, setDarkState } = useContext(ModeContext)
     return (
-        <main className="about">
+        <main className={darkState ? "about dark" : "about"}>
             <header className="about-header">
                 <h1>About US</h1>
             </header>

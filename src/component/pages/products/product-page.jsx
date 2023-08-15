@@ -1,10 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Products from "./products";
+import { useContext } from "react";
+import { ModeContext } from "../modeContext";
 
 export default function Product(){
+    const { darkState } = useContext(ModeContext)
     return (
-        <section className="products">
+        <section className={darkState ? "products dark": "products"}>
             <div className="product-land">
                 <div className="product-wel">
                     <h1>Get 5% Cash</h1>

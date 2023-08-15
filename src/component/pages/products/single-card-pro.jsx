@@ -3,11 +3,14 @@ import { Link, useLocation, useParams } from "react-router-dom";
 import { useCart } from "react-use-cart";
 import { RiArrowGoBackLine } from "react-icons/ri"
 import { FaLongArrowAltRight } from "react-icons/fa"
+import { useContext } from "react";
+import { ModeContext } from "../modeContext";
 
 export default function SingleCardPro(props, index){
     const location = useLocation()
     const [count, setCount] = React.useState(1)
     const [displayMessage, setDisplayMessage] = useState(false)
+    const { darkState } = useContext(ModeContext)
     const {
         isEmpty,
         totalUniqueItems,
@@ -44,7 +47,7 @@ export default function SingleCardPro(props, index){
     }
 
     return (
-        <div className="all-card">
+        <div className={darkState ? "all-card dark" : "all-card"}>
             <Link className="back-btn" to={`..${search}`} relative="path"><RiArrowGoBackLine className="back-btn-icon" /> back to {type} products</Link>
             <main className="single-product-page" key={props.id}>
                 <section className="product-images">

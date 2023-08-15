@@ -2,8 +2,11 @@ import React, { useEffect } from "react";
 import { useCart } from "react-use-cart";
 import { Link } from "react-router-dom"
 import { AiFillDelete, AiOutlineClear } from "react-icons/ai"
+import { useContext } from "react";
+import { ModeContext } from "../modeContext";
  
 export default function Bag(){
+    const { darkState } = useContext(ModeContext)
     const {
         isEmpty,
         totalUniqueItems,
@@ -16,14 +19,14 @@ export default function Bag(){
     } = useCart()
     if(isEmpty){
         return (
-            <div className="empty-bag">
+            <div className={darkState ? "empty-bag dark" : "empty-bag"}>
                 <h1>Your Bag is Empty</h1>
                 <Link to="/products">Return to Products</Link>
             </div>
         )
     }
     return (
-        <main>
+        <main className={darkState ? "dark" : null}>
             <div className="bag-lists">
                 <h1>My Bag's List</h1>
             {items.map((item, index) => {

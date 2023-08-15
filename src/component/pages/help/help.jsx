@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { MdManageAccounts } from "react-icons/md"
 import { TbReportAnalytics } from "react-icons/tb"
 import { BiPurchaseTagAlt } from "react-icons/bi"
 import { Link } from "react-router-dom";
+import { ModeContext } from "../modeContext";
 
 export default function Help(){
+    const { darkState } = useContext(ModeContext)
     return (
-        <div className="help">
+        <div className={darkState ? "help dark" : "help"}>
             <div className="help-image">
                 <h1>How can we help ?</h1>
                 <section>
