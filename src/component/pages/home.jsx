@@ -29,7 +29,7 @@ export default function Home(){
                 <div className="home-card">
                     <h1 className="red">Get Up to 20%</h1>
                     <h1>On Everything</h1>
-                    <p>We offer the best range of our products to customer with 20%, 30% and up to 60%. here you can buy the newest and used item from world different companies.</p>
+                    <p>We provide customers with a premier selection of products, featuring discounts ranging from 20% to 60%. Explore our collection of both brand-new and gently-used items sourced from a variety of renowned global companies.</p>
                     <Link to="/products" className="home-button">Shop</Link>
                 </div>
             </main>
