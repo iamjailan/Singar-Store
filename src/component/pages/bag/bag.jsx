@@ -29,7 +29,9 @@ export default function Bag(){
             {items.map((item, index) => {
                 return (
                 <div className="bag-card" key={index}>
+                <Link to={`/products/${item.id}`}>
                     <img src={item.image} className="bag-image" />
+                </Link>
                     <section className="bag-details">
                         <h1>${item.price}</h1>
                         <h1>{item.name}</h1>

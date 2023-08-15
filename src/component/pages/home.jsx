@@ -9,8 +9,8 @@ export default function Home(){
     const cardEl = list.map(item => {
         const {id, name, category, desc, image} = item
         return (
-            <Link to="/lists" className="home-link">
-            <div className="cards-lists" key={item.id}>
+            <Link to="/lists" className="home-link" key={id}>
+            <div className="cards-lists">
                 <img src={image} className="home-image" />
                 <div className="home-desc">
                     <div className="home-cat">

@@ -11,6 +11,9 @@ import NotFound from "./pages/NotFound";
 import Product from "./pages/products/product-page";
 import SingleProduct from "./pages/products/single-product";
 import { CartProvider } from "react-use-cart";
+import HelpNavbar from "./pages/help/help-navbar";
+import About from "./pages/help/about";
+import Contact from "./pages/help/contact";
 
 export default function App(){
     return (
@@ -24,7 +27,11 @@ export default function App(){
                         <Route path="products/:id" element={<SingleProduct />} />
                         <Route path="Bag" element={<Bag />} />
                         <Route path="lists" element={<Lists />} />
-                        <Route path="help" element={<Help />} />
+                        <Route path="help" element={<HelpNavbar />}>
+                            <Route index element={<Help />}/>
+                            <Route path="about" element={<About />}/>
+                            <Route path="contact" element={<Contact />}/>
+                        </Route>
                         <Route path="*" element={<NotFound />} />
                     </Route>
                 </Routes>

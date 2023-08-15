@@ -823,12 +823,13 @@ a {
         justify-content: space-between;
     }
     .bag-total h1 {
-        font-size: .5rem;
+        font-size: .7rem;
     }
     .bag-total .clear-bag {
         padding: 10px;
-        font-size: .5rem;
+        font-size: 1rem;
         font-weight: 100;
+        color: #000;
     }
 }
 .visit-my-bag {
@@ -881,4 +882,111 @@ a {
     font-size: 12px;
     margin-bottom: 10px;
     position: absolute;
+}
+.help-navbar {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-around;
+    background-color: lightblue;
+}
+
+.help-image {
+    height: 50vh;
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.help-image input {
+    padding: 15px 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: 2px solid blue;
+    outline: none;
+}
+.help-image button {
+    padding: 15px 40px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: blue;
+    color: #fff;
+    border: 2px solid blue;
+}
+.help-image h1 {
+    margin-bottom: 30px;
+}
+.help-desk {
+    padding: 30px;
+}
+.desk-list {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.desk-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    text-align: center;
+    padding: 10px;
+}
+.desk-title {
+    font-size: 1.4rem;
+}
+.desk-text {
+    font-size: .9rem;
+    padding: 10px 0px;
+}
+.desk-icon {
+    font-size: 70px;
+    padding: 10px 0px;
+}
+.desk-link {
+    color: rgb(44, 44, 194);
+}
+@media screen and (max-width: 768px){
+    .desk-list {
+        display: flex;
+        flex-direction: column;
+    }
+    .help-image input {
+        padding: 10px 20px;
+        width: 200px;
+    }
+    .help-image button {
+        padding: 10px 20px;
+    }
+    .help-image h1 {
+        font-size: 1.3rem;
+    }
+}
+@media screen and (max-width: 450px){
+    .desk-card {
+        width: 300px;
+    }
+    .help-desk h1 {
+        font-size: 1.7rem;
+    }
+    .desk-text {
+        font-size: .8rem;
+    }
+    .desk-card .desk-title {
+        font-size: 1.5rem;
+    }
+    .desk-card .desk-link {
+        font-size: .9rem;
+    }
+    .help-image input {
+        padding: 8px;
+        width: 150px;
+    }
+    .help-image button {
+        padding: 8px;
+    }
 }
