@@ -501,16 +501,17 @@ a {
     }
 }
 .product-image img {
-    width: 300px;
+    width: 250px;
     height: 250px;
     border-radius: 5px;
 }
 .product-card {
     padding: 20px;
-    /* width: 300px; */
     box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.4);
-    margin: 5px;
     margin: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .product-card a {
     color: #000;
@@ -630,8 +631,8 @@ a {
         grid-template-columns: auto auto auto;
     }
     .product-card .product-image img {
-        width: 250px;
-        height: 250px;
+        width: 210px;
+        height: 210px;
     }
 }
 @media screen and (max-width: 768px){
@@ -648,7 +649,7 @@ a {
         align-items: center;
     }
 }
-@media screen and (max-width: 580px){
+@media screen and (max-width: 660px){
     .all-products {
         grid-template-columns: auto;
     }
@@ -903,7 +904,7 @@ a {
     padding: 15px 10px;
     width: 300px;
     border-radius: 5px;
-    border: 2px solid blue;
+    border: 2px solid var(--clr-logo);
     outline: none;
 }
 .help-image button {
@@ -911,9 +912,13 @@ a {
     margin-left: 10px;
     border-radius: 5px;
     cursor: pointer;
-    background-color: blue;
+    background-color: var(--clr-logo);
     color: #fff;
-    border: 2px solid blue;
+    border: 2px solid var(--clr-logo);
+    transition: .6s;
+}
+.help-image button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
 }
 .help-image h1 {
     margin-bottom: 30px;
@@ -938,6 +943,7 @@ a {
 }
 .desk-title {
     font-size: 1.4rem;
+    color: var(--clr-logo);
 }
 .desk-text {
     font-size: .9rem;
@@ -988,5 +994,39 @@ a {
     }
     .help-image button {
         padding: 8px;
+    }
+}
+.about-header {
+    height: 30.3vh;
+    display: flex;
+    justify-content: baseline;
+    align-items: end;
+    padding: 20px;
+    background: url("../../../public/about.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+.about-main {
+    padding: 20px;
+    width: 70%;
+}
+.about-title {
+    padding: 20px 0px;
+    color: var(--clr-logo);
+}
+.about-text {
+    font-size: 1rem;
+}
+@media screen and (max-width: 425px){
+    .about-title {
+        font-size: 1rem;
+    }
+    .about-main {
+        width: 80%;
+    }
+    .about-main .about-text {
+        font-size: .8rem;
     }
 }
