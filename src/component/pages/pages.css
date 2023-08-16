@@ -28,8 +28,16 @@ a {
     font-weight: 600;
 }
 .navbar a {
-    font-size: 22px;
+    font-size: 15px;
 }
+#flex-bag {
+    display: flex;
+    width: 45px;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+}
+
 .footer {
     display: flex;
     flex-direction: column;
@@ -781,14 +789,18 @@ a {
     padding: 10px 30px;
     border-radius: 5px;
     border: none;
-    background-color: transparent;
     cursor: pointer;
     font-weight: 600;
     transition: .6s;
-    font-size: 30px;
+    font-size: 15px;
+    background-color: transparent;
+    color: #000;
+    border: 2px solid black;
 }
 .clear-bag:hover {
-    color: red;
+    color: #fff;
+    background-color: red;
+    border: 2px solid red;
 }
 .empty-bag {
     height: 71.3vh;
@@ -882,7 +894,8 @@ a {
 }
 .nav-total {
     font-size: 12px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
+    margin-right: 18px;
     position: absolute;
 }
 .help-navbar {
@@ -890,16 +903,17 @@ a {
     padding: 20px;
     align-items: center;
     justify-content: space-around;
-    background-color: lightblue;
 }
-
+#bag-icon {
+    font-size: 22px;
+}
 .help-image {
     height: 50vh;
-    background-color: lightblue;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: blueviolet;
 }
 .help-image input {
     padding: 15px 10px;
@@ -1090,6 +1104,10 @@ a {
 }
 .dark .clear-bag {
     color: #fff;
+    border: 2px solid #fff;
+}
+.dark .clear-bag:hover {
+    border: 2px solid red;
 }
 .dark .bag-btn button {
     color: #fff;
@@ -1103,3 +1121,197 @@ a {
 .dark .navbar-flex .svg {
     color: #fff;
 }
+.dark .desk-icon {
+    color: #fff;
+}
+.dark .help-image {
+    background-color: #121212;
+}
+.dark .help-image section button {
+    background-color: #fff;
+    color: #000;
+    font-weight: 600;
+}
+.dark ,.dark .navbar, .dark .navbar--mobile, .dark .navbar--mobile-height {
+    background-color:  #151515;
+}
+.dark.help-navbar {
+    background-color: #111111;
+}
+.Bag-buy {
+    padding:  10px 50px;
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    border: 2px solid lime;
+    transition: .6s;
+    font-weight: 600;
+}
+.dark .bag-remove:hover {
+    color: red;
+}
+.Bag-buy:hover {
+    background-color: lime;
+}
+.contact {
+    padding: 20px;
+}
+.contact-cards {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.contact-card {
+    width: 250px;
+    padding: 60px 20px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.dark .contact-card {
+    border: 1px solid rgba(255, 255, 255, .9);
+}
+.contact-card p {
+    padding: 20px 0px;
+    color: rgba(0, 0, 0, 0.7);
+}
+.dark .contact-card p{
+    color: rgba(255, 255, 255, .7);
+}
+.contact-card a {
+    color: rgb(125, 125, 224);
+}
+.contact-main {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact-main section {
+    width: 80%;
+    height: auto;
+    margin-bottom: 20px;
+    position: relative;
+}
+.contact-main p {
+    color: rgba(0, 0, 0, 0.7);
+}
+.dark .contact-main p {
+    color: rgba(255, 255, 255, .7);
+}
+.contact-main h1 {
+    padding: 30px 0px;
+    font-size: 3rem;
+}
+.contact-main h4 {
+    padding-bottom: 20px;
+    line-height: 30px;
+    font-weight: 100;
+}
+.contact-real {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.real-card {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: 20px;
+    width: 200px;
+}
+.real-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.real-card h5 {
+    font-weight: 100;
+    margin-top: 10px;
+}
+.real-card h2 {
+    padding: 10px 0px;
+}
+@media screen and (max-width: 1024px){
+    .contact-cards {
+        justify-content: space-between;
+    }
+    .contact-card {
+        width: 200px;
+        height: 150px;
+    }
+    .contact-card h1 {
+        font-size: 1.5rem;
+    }
+    .contact-real {
+        grid-template-columns: auto auto auto;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .contact-cards {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .contact-card {
+        margin: 20px 0px;
+    }
+    .contact-real {
+        grid-template-columns: auto auto;
+    }
+    .contact-main section h1 {
+        font-size: 2rem;
+    }
+}
+@media screen and (max-width: 570px){
+    .contact-cards {
+        display: flex;
+        flex-direction: column;
+    }
+    .contact-real {
+        grid-template-columns: auto;
+    }
+    .contact-main section h1 {
+        font-size: 1.5rem;
+    }
+    .contact-main section h4 {
+        font-size: .9rem;
+        line-height: 25px;
+        font-weight: 100;
+    }
+    .contact-main section p {
+        font-size: .9rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

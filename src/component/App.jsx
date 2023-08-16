@@ -15,23 +15,10 @@ import HelpNavbar from "./pages/help/help-navbar";
 import About from "./pages/help/about";
 import Contact from "./pages/help/contact";
 import { ModeContext } from "./pages/modeContext"
+import Purchase from "./pages/bag/purchase";
 
 export default function App(){
     const [darkState, setDarkState] = React.useState(false)
-    useEffect(() => {
-        const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-        setDarkState(darkModeMediaQuery.matches);
-    
-        const handleDarkModeChange = (event) => {
-          setDarkState(event.matches);
-        };
-    
-        darkModeMediaQuery.addListener(handleDarkModeChange);
-    
-        return () => {
-          darkModeMediaQuery.removeListener(handleDarkModeChange);
-        };
-      }, []);
     return (
         <>
         <BrowserRouter>
@@ -43,6 +30,7 @@ export default function App(){
                         <Route path="products" element={<Product />} />
                         <Route path="products/:id" element={<SingleProduct />} />
                         <Route path="Bag" element={<Bag />} />
+                        <Route path="purchase" element={<Purchase />} />
                         <Route path="lists" element={<Lists />} />
                         <Route path="help" element={<HelpNavbar />}>
                             <Route index element={<Help />}/>

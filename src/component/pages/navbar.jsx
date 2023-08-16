@@ -36,11 +36,11 @@ export default function Navbar(){
                 <h1>Singar Store</h1>
                 <div className="navbar-menu">
                     <ul>
-                        <NavLink to="/" className={({isActive}) => isActive ? "active-links": null}><BiHomeCircle /></NavLink>
-                        <NavLink to="/products" className={({isActive}) => isActive ? "active-links": null}><MdProductionQuantityLimits /></NavLink>
-                        <NavLink to="bag" className={({isActive}) => isActive ? "active-links": null}><BsBagFill /><span className="nav-total">{totalItems === 0 ? null : totalItems}</span></NavLink>
-                        <NavLink to="/lists" className={({isActive}) => isActive ? "active-links": null}><LiaClipboardListSolid /></NavLink>
-                        <NavLink to="/help" className={({isActive}) => isActive ? "active-links": null}><BiHelpCircle /></NavLink>
+                        <NavLink to="/" className={({isActive}) => isActive ? "active-links": null}>Home</NavLink>
+                        <NavLink to="/products" className={({isActive}) => isActive ? "active-links": null}>Products</NavLink>
+                        <NavLink to="bag" id="flex-bag" className={({isActive}) => isActive ? "active-links": null}><BsBagFill id="bag-icon" /> Bag<span className="nav-total">{totalItems === 0 ? null : totalItems}</span></NavLink>
+                        <NavLink to="/lists" className={({isActive}) => isActive ? "active-links": null}>Lists</NavLink>
+                        <NavLink to="/help" className={({isActive}) => isActive ? "active-links": null}>Help</NavLink>
                         <NavLink onClick={toggleMode}>{ darkState ? <CiDark /> : <MdLightMode />}</NavLink>
                     </ul>
                 </div>
@@ -49,16 +49,16 @@ export default function Navbar(){
                 <nav className={menu ? "navbar--mobile-height" : "navbar--mobile"}>
                     <div className="navbar-flex">
                             <h1>Singar Store</h1>
-                            {menu ? <GrClose className="svg" onClick={handleMenu} /> : <CiMenuFries className="svg" onClick={handleMenu} />}
+                            {menu ? <GrClose className="svg forDark" onClick={handleMenu} /> : <CiMenuFries className="svg" onClick={handleMenu} />}
                             
                     </div>
                     <div className={menu ? "show-bar" : "hide-bar"}>
                         <ul>
-                            <NavLink to="/" className={({isActive}) => isActive ? "active-links": null}><BiHomeCircle /></NavLink>
-                            <NavLink to="/products" className={({isActive}) => isActive ? "active-links": null}><MdProductionQuantityLimits /></NavLink>
-                            <NavLink to="bag" className={({isActive}) => isActive ? "active-links": null}><BsBagFill /><span className="nav-total">{totalItems === 0 ? null : totalItems}</span></NavLink>
-                            <NavLink to="/lists" className={({isActive}) => isActive ? "active-links": null}><LiaClipboardListSolid /></NavLink>
-                            <NavLink to="/help" className={({isActive}) => isActive ? "active-links": null}><BiHelpCircle /></NavLink>
+                            <NavLink to="/" className={({isActive}) => isActive ? "active-links": null}>Home</NavLink>
+                            <NavLink to="/products" className={({isActive}) => isActive ? "active-links": null}>Products</NavLink>
+                            <NavLink to="bag" className={({isActive}) => isActive ? "active-links": null}><BsBagFill /> Bag<span className="nav-total">{totalItems === 0 ? null : totalItems}</span></NavLink>
+                            <NavLink to="/lists" className={({isActive}) => isActive ? "active-links": null}>Lists</NavLink>
+                            <NavLink to="/help" className={({isActive}) => isActive ? "active-links": null}>Help</NavLink>
                             <NavLink onClick={toggleMode}>{ darkState ? <CiDark /> : <MdLightMode />}</NavLink>
                         </ul>
                     </div>
