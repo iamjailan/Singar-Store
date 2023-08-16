@@ -148,6 +148,7 @@ a {
     font-size: 17px;
     padding: 20px;
     font-family: 'Roboto', sans-serif;
+    font-weight: 100;
 }
 .home-link {
     color: black;
@@ -963,6 +964,7 @@ a {
 .desk-text {
     font-size: .9rem;
     padding: 10px 0px;
+    font-weight: 100;
 }
 .desk-icon {
     font-size: 70px;
@@ -1033,6 +1035,7 @@ a {
 }
 .about-text {
     font-size: 1rem;
+    font-weight: 100;
 }
 @media screen and (max-width: 425px){
     .about-title {
