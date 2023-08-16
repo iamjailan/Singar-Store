@@ -1,12 +1,9 @@
 import React, { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { CiMenuFries, CiDark } from 'react-icons/ci';
-import { GrClose } from 'react-icons/gr';
 import { BsBagFill } from 'react-icons/bs'
 import { useCart } from "react-use-cart";
-import { BiHelpCircle, BiHomeCircle } from "react-icons/bi"
-import { LiaClipboardListSolid } from "react-icons/lia"
-import { MdProductionQuantityLimits, MdLightMode } from "react-icons/md"
+import { MdLightMode, MdOutlineRestaurantMenu } from "react-icons/md"
 import { ModeContext } from "./modeContext";
 import { useEffect } from "react";
 
@@ -49,7 +46,7 @@ export default function Navbar(){
                 <nav className={menu ? "navbar--mobile-height" : "navbar--mobile"}>
                     <div className="navbar-flex">
                             <h1>Singar Store</h1>
-                            {menu ? <GrClose className="svg forDark" onClick={handleMenu} /> : <CiMenuFries className="svg" onClick={handleMenu} />}
+                            {menu ? <MdOutlineRestaurantMenu className="svg forDark" onClick={handleMenu} /> : <CiMenuFries className="svg" onClick={handleMenu} />}
                             
                     </div>
                     <div className={menu ? "show-bar" : "hide-bar"}>
