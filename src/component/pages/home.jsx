@@ -9,9 +9,9 @@ export default function Home(){
         setLists(data)
     }, [])
     const cardEl = list.map(item => {
-        const {id, name, category, desc, image} = item
+        const {id, name, category, desc, image, type} = item
         return (
-            <Link to="/products" className="home-link" key={id}>
+            <Link to={`/products?type=${type}`} className="home-link" key={id}>
             <div className="cards-lists">
                 <img src={image} className="home-image" />
                 <div className="home-desc">
@@ -45,7 +45,7 @@ export default function Home(){
                         <h1>24/7 Services</h1>
                     </div>
                     <div className="statue-card">
-                        <h1>34 Branches</h1>
+                        <h1>Free Delivery</h1>
                     </div>
                 </main>
             </div>

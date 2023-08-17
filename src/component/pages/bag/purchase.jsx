@@ -2,7 +2,8 @@ import React, { useContext } from "react";
 import { useCart } from "react-use-cart";
 import { BsBagFill } from "react-icons/bs";
 import { ModeContext } from "../modeContext";
-import { Link, redirect } from "react-router-dom";
+import { Link, Outlet, redirect } from "react-router-dom";
+import SharedBag from "./sharedLayout";
 
 export default function Purchase(){
     const {
@@ -100,9 +101,7 @@ export default function Purchase(){
                     </div>
                     <div>
                     </div>
-                    <div className="pay-btn">
-                        <button>Purchase</button>
-                    </div>
+                    <SharedBag />
                 </div>
                 </div>
             </main>

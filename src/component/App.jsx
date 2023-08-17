@@ -16,6 +16,9 @@ import About from "./pages/help/about";
 import Contact from "./pages/help/contact";
 import { ModeContext } from "./pages/modeContext"
 import Purchase from "./pages/bag/purchase";
+import CreditCard from "./pages/bag/crediCard";
+import AziPay from "./pages/bag/aziPay";
+import SharedBag from "./pages/bag/sharedLayout";
 
 export default function App(){
     const [darkState, setDarkState] = React.useState(false)
@@ -30,7 +33,10 @@ export default function App(){
                         <Route path="products" element={<Product />} />
                         <Route path="products/:id" element={<SingleProduct />} />
                         <Route path="Bag" element={<Bag />} />
-                        <Route path="purchase" element={<Purchase />} />
+                        <Route path="purchase" element={<Purchase />}>
+                            <Route path="creditCard" element={<CreditCard />} />
+                            <Route path="aziPay" element={<AziPay />} />
+                        </Route>
                         <Route path="lists" element={<Lists />} />
                         <Route path="help" element={<HelpNavbar />}>
                             <Route index element={<Help />}/>
