@@ -1596,8 +1596,10 @@ a {
 .qr-code {
     height: 100px;
     width: 100px;
-    border: 1px solid red;
     margin: 10px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .credit-page {
     padding: 20px 10px;
