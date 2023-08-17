@@ -18,7 +18,7 @@ export default function ProductCards(props, index, handleMessage){
                 </section>
                 <div className="product-details">
                     <h1>{props.name}</h1>
-                    <h1><span>${props.price}</span> / ${props.discountPrice}</h1>
+                    <h1><span>AFG{props.price}</span> /   AFG{props.discountPrice}</h1>
                 </div>
             </NavLink>
                 <div className="product-card-btn">

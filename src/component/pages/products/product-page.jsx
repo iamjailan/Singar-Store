@@ -21,23 +21,23 @@ export default function Product(){
                 <div className="discount-cards">
                     <div className="discount-card first">
                         <h2 className="discount-save">Save</h2>
-                        <h1 className="discount-price">$100</h1>
-                        <p className="discount-text">Buy up to 10 clothe at one time and get $100 as gift.🎉</p>
+                        <h1 className="discount-price">AFG 100</h1>
+                        <p className="discount-text">Buy up to 10 clothe at one time and get AFG 100 as gift.🎉</p>
                     </div>
                     <div className="discount-card second">
                         <h2 className="discount-save">Save</h2>
-                        <h1 className="discount-price">$70</h1>
-                        <p className="discount-text">Buy up to 4 adult clothes at one time and get $$70 as gift.🎉</p>
+                        <h1 className="discount-price">AFG 70</h1>
+                        <p className="discount-text">Buy up to 4 adult clothes at one time and get AFG AFG 70 as gift.🎉</p>
                     </div>
                     <div className="discount-card third">
                         <h2 className="discount-save">Save</h2>
-                        <h1 className="discount-price">$40</h1>
-                        <p className="discount-text">Buy up to 2 couple shoes at one time and get $40 as gift.🎉</p>
+                        <h1 className="discount-price">AFG 40</h1>
+                        <p className="discount-text">Buy up to 2 couple shoes at one time and get AFG 40 as gift.🎉</p>
                     </div>
                     <div className="discount-card fourth">
                         <h2 className="discount-save">Save</h2>
-                        <h1 className="discount-price">$50</h1>
-                        <p className="discount-text">Invite 10 friend and get $50 as discount gift for each item.🎉</p>
+                        <h1 className="discount-price">AFG 50</h1>
+                        <p className="discount-text">Invite 10 friend and get AFG 50 as discount gift for each item.🎉</p>
                     </div>
                 </div>
             </main>

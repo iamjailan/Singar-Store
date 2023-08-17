@@ -32,7 +32,7 @@ a {
 }
 #flex-bag {
     display: flex;
-    width: 45px;
+    width: 70px;
     justify-content: space-around;
     align-items: center;
     height: 50px;
@@ -1014,7 +1014,7 @@ a {
     }
 }
 .about-header {
-    height: 30.3vh;
+    height: 32.9vh;
     display: flex;
     justify-content: baseline;
     align-items: end;
@@ -1144,7 +1144,7 @@ a {
 .Bag-buy {
     padding:  10px 50px;
     cursor: pointer;
-    color: #fff;
+    color: #000;
     border: none;
     border-radius: 5px;
     font-weight: 600;
@@ -1157,6 +1157,7 @@ a {
 }
 .Bag-buy:hover {
     background-color: lime;
+    color: #fff;
 }
 .contact {
     padding: 20px;
@@ -1295,26 +1296,286 @@ a {
         font-size: .9rem;
     }
 }
+@media screen and (max-width: 768px){
+    .bag-total .clear-bag, .Bag-buy {
+        padding: 10px;
+        font-size: .8rem;
+        margin: 10px 0px;
+        text-align: center;
+    }
+    .bag-total {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .bag-total h1 {
+        font-size: 1.1rem;
+    }
+}
+.dark .Bag-buy {
+    color: #fff;
+}
+.purchase {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.purchase-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.purchase-header h1  {
+    margin-left: 10px;
+}
+.purchase-icon {
+    font-size: 22px;
+}
+.dark.purchase {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.dark .purchase-icon {
+    color: #fff;
+}
+.purchase-flex {
+    display: flex;
+    justify-content: space-between; 
+    align-items: start;
+    width: 100%;
+}
+.purchase-card {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+}
+.purchase-card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+}
+.purchase-details {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    justify-content: space-between;
+    align-items: start; 
+    width: 100%;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    padding: 10px 0px;
+    margin: 20px 0px;
+    text-align: center;
+}
+.bottom-details {
+    display: flex;
+    padding: 10px;
+    justify-content: space-around;
+    align-items: center;
+}
+.purchase-h1 {
+    font-weight: 100;
+    font-size: 1rem;
+}
+.purchase-button {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+}
+.purchase-button button {
+    padding: 10px 15px;
+    background-color: transparent;
+    color: #000;
+    border: none;
+    cursor: pointer;
+}
+.dark .purchase-button button {
+    color: #fff;
+}
+.dark .purchase-details {
+    border-bottom: 2px solid #fff;
+    border-top: 2px solid #fff;
+}
+.purchase-all-cards {
+    display: flex;
+    flex-direction: column;
+}
+.payment{
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.pay-card {
+    display: flex;
+    flex-direction: column;
+}
+.pay-promo {
+    margin-bottom: -18px;
+    margin-left: 20px;
+}
+.pay-card div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+.pay-card div h1 {
+    font-weight: 100;
+    font-size: 1rem;
+}
+.pay-card div h2 {
+    font-weight: 100;
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.8);
+}
+.dark .pay-card div h2 {
+    font-weight: 100;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, .8);
 
+}
+.pay-ads {
+    display: flex;
+    flex-direction: column;
+}
+.pay-ads h2 {
+    line-height: 30px;
+}
+.pay-input input {
+    padding: 10px 30px;
+    outline: none;
+}
+.pay-input button {
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: 2px solid black;
+    cursor: pointer;
+    font-size: .7rem;
+    flex-wrap: nowrap;
+}
+.dark .pay-input button {
+    background-color: #fff;
+    border: 2px solid #fff;
+    color: #000;
+}
+.dark.pay-input button {
+    padding: 10px 30px;
+    outline: none;
+    background-color: #fff;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.number::-webkit-inner-spin-button, .number::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+.number {
+    -moz-appearance: textfield;
+}
+.pay-final h1 {
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+.pay-ads h2 {
+    padding-bottom: 20px;
+}
+.pay-ads h2 span {
+    padding: 5px;
+    background-color: rgb(83, 83, 255);
+    border-radius: 10px;
+    color: #fff;
+}
+.pay-ads h3 {
+    font-weight: 100;
+    font-size: .9rem;
+}
+.pay-ads h3 span {
+    color: red;
+}
+.pay-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.pay-btn button {
+    padding: 10px 30px;
+    border-radius: 5px;
+    background-color: rgb(83, 83, 255);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.empty-purchase {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+}
+.empty-purchase a {
+    padding: 10px 20px;
+    background-color: lime;
+    margin-top: 20px;
+    border-radius: 5px;
+    color: #fff;
+}
+@media screen  and (max-width: 1024px){
+    .purchase-details img {
+        width: 150px;
+        height: 150px;
+    }
+    .purchase-h1 {
+        font-size: .8rem;
+    }
+    .purchase-name span {
+        font-size: .5rem;
+    }
+    .pay-input input {
+        padding: 10px;
+        width: 160px;
+    }
+    .pay-input button {
+        padding: 10px;
+        font-size: .7rem;
+    }
+}
+@media screen and (max-width:768px){
+    .purchase-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+    .purchase-card {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 425px){
+    .purchase-details img {
+        width: 80px;
+        height: 80px;
+        padding-top: 0px;
+    }
+    .purchase-h1 {
+        font-size: .7rem;
+    }
+    .purchase-details div p {
+        font-size: .7rem;
+    }
+    .pay-promo {
+        font-size: .8rem;
+    }
+    .pay-input input {
+        padding: 8px;
+        width: 120px;
+    }
+    .pay-input button {
+        padding: 8px;
+        width: 60px;
+        text-align: center;
+    }
+    .payment .pay-card .pay-ads h2, span {
+        font-size: .77rem;
+    }
+    .payment .pay-card .pay-ads h3, span {
+        font-size: .77rem;
+    }
+}

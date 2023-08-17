@@ -37,7 +37,7 @@ export default function Bag(){
                         <img src={item.image} className="bag-image" />
                     </Link>
                         <section className="bag-details">
-                            <h1>${item.price}</h1>
+                            <h1>{item.price} AFG</h1>
                             <h1>{item.name}</h1>
                         </section>
                         <div className="bag-btn">
@@ -45,7 +45,7 @@ export default function Bag(){
                             <button className="total-qu">{item.quantity}</button>
                             <button onClick={() => updateItemQuantity(item.id, item.quantity + 1)}>+</button>
                         </div>
-                        <h1 className="bag-price">Item Total: ${item.itemTotal}</h1>
+                        <h1 className="bag-price">Item Total: {item.itemTotal} AFG</h1>
                         <h1 className="bag-price">Item Quantity: {item.quantity}</h1>
                         <button className="bag-remove" onClick={() => removeItem(item.id)}><AiFillDelete /></button>
                     </div>
@@ -54,7 +54,7 @@ export default function Bag(){
             </div>
             <section className="bag-total">
                     <h1>Total Items: {totalItems}</h1>
-                    <h1>Total Price: ${cartTotal}</h1>
+                    <h1>Total Price: {cartTotal} AFG</h1>
                     <button className="clear-bag" onClick={() => emptyCart()}>Clear Bag</button>
                     <Link className="Bag-buy" to="/purchase">Buy</Link>
             </section>

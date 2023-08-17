@@ -11,7 +11,7 @@ export default function Home(){
     const cardEl = list.map(item => {
         const {id, name, category, desc, image} = item
         return (
-            <Link to="/lists" className="home-link" key={id}>
+            <Link to="/products" className="home-link" key={id}>
             <div className="cards-lists">
                 <img src={image} className="home-image" />
                 <div className="home-desc">
@@ -50,7 +50,7 @@ export default function Home(){
                 </main>
             </div>
             <div className="home-explore">
-                <h1>Explores our Lists</h1>
+                <h1>Explores our Products</h1>
                 <p className="underline"></p>
             </div>
             <div key={list.id}>

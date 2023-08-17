@@ -233,4 +233,17 @@ export default [
         text: "Experience Hair Transformation with Our Shampoo: Step into a world of revitalizing beauty with our premium shampoo collection. Crafted with care and expertise, our shampoos are more than just cleansing agents – they're your daily dose of confidence and radiance. Infused with nourishing ingredients and innovative formulas, each wash becomes a rejuvenating ritual, leaving your hair soft, vibrant, and irresistibly touchable. Unleash the potential of your locks and embark on a journey of hair transformation that's as luxurious as it is effective. Elevate your hair care routine with our exquisite shampoos and unlock the secret to hair that shines with life and vitality.",
         discountPrice: "77"
     },
+    {
+        id:19,
+        name: "BiCycle",
+        type: "other",
+        price: "120",
+        image: "c.png",
+        image1: "c.png",
+        image2: "c.png",
+        rating: "⭐⭐⭐⭐⭐",
+        reviewAmount: "97",
+        text: "Experience Hair Transformation with Our Shampoo: Step into a world of revitalizing beauty with our premium shampoo collection. Crafted with care and expertise, our shampoos are more than just cleansing agents – they're your daily dose of confidence and radiance. Infused with nourishing ingredients and innovative formulas, each wash becomes a rejuvenating ritual, leaving your hair soft, vibrant, and irresistibly touchable. Unleash the potential of your locks and embark on a journey of hair transformation that's as luxurious as it is effective. Elevate your hair care routine with our exquisite shampoos and unlock the secret to hair that shines with life and vitality.",
+        discountPrice: "120"
+    },
 ]

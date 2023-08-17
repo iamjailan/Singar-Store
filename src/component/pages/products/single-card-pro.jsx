@@ -59,7 +59,7 @@ export default function SingleCardPro(props, index){
                 </section>
                 <div className="single-details">
                     <h1 className="product-name">{props.name}</h1>
-                    <h1 className="single-price">${props.price}.00</h1>
+                    <h1 className="single-price">AFG {props.price}.00</h1>
                     <div className="s-details-review">
                         <p>{props.rating}</p>
                         <p className="review-amount">{props.reviewAmount} Reviews</p>
