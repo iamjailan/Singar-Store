@@ -31,27 +31,27 @@ export default function Contact(){
                 </section>
                 <div className="contact-real">
                     <div className="real-card">
-                        <img src="/image/k.png" />
+                        <img src="/profile.png" />
                         <h5>Kabul, Afghanistan</h5>
                         <h2>Jailan Wardak</h2>
                         <p>Ask me about everything's, i'm here to listen.</p>
                     </div>
                     <div className="real-card">
-                        <img src="/image/a-3.png" />
+                        <img src="/profile.png" />
                         <h5>Mazar-e-Sharif, Afghanistan</h5>
-                        <h2>Jailan Wardak</h2>
+                        <h2>Wagma Wardak</h2>
                         <p>Ask me about everything's, i'm here to listen.</p>
                     </div>
                     <div className="real-card">
-                        <img src="/image/a-9.png" />
+                        <img src="/profile.png" />
                         <h5>Kabul, Afghanistan</h5>
-                        <h2>Jailan Wardak</h2>
+                        <h2>Attal Wardak</h2>
                         <p>Ask me about everything's, i'm here to listen.</p>
                     </div>
                     <div className="real-card">
-                        <img src="/image/a-6.png" />
+                        <img src="/profile.png" />
                         <h5>Herat, Afghanistan</h5>
-                        <h2>Jailan Wardak</h2>
+                        <h2>Wadan Wardak</h2>
                         <p>Ask me about everything's, i'm here to listen.</p>
                     </div>
                 </div>
