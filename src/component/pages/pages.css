@@ -1738,19 +1738,19 @@ a {
 
 @media screen and (max-width: 768px){
     .credit-number {
-        width: 200px;
+        width: 300px;
         padding: 10px;
     }
     .credit-street {
-        width: 200px;
+        width: 300px;
         padding: 10px;
 
     }
     .credit-optional {
-        width: 200px;
+        width: 300px;
     }
     .credit-select {
-        width: 200px;
+        width: 300px;
     }
     #city {
         width: 30px;
@@ -1762,9 +1762,66 @@ a {
         width: 30px;
     }
     .credit-page {
-        width: 240px;
+        width: 100%;
     }
     .azi-pay h1 {
         font-size: 1rem;
     }
+}
+@media screen and (max-width: 425px){
+    .credit-number {
+        width: 200px;
+    }
+    .credit-optional {
+        width: 200px;
+    }
+    .credit-select {
+        width: 200px;
+    }
+    .credit-street {
+        width: 200px;
+    }
+    .credit-page {
+        width: 250px;
+    }
+    .credit-city {
+        display: flex;
+        flex-direction: column;
+    }
+    .credit-city section {
+        display: flex;
+        flex-direction: column;
+    }
+    #state {
+        margin: 10px 0px;
+        width: 100px;
+    }
+    #zip {
+        width: 100px;
+    }
+    #city {
+        width: 100px;
+    }
+}
+.sharedBag {
+    background-color: transparent;
+}
+.credit-page  {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.azi-pay {
+    background-color: transparent;
+}
+.credit-inputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+option {
+    background-color: transparent;
 }

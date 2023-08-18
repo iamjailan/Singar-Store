@@ -99,8 +99,6 @@ export default function Purchase(){
                         <h2>or 4  interested free payment of 10.00 AFG with <span>Azi-Pay</span></h2>
                         <h3>You're <span>100.00</span> AFG away from free shipping!</h3>
                     </div>
-                    <div>
-                    </div>
                     <SharedBag />
                 </div>
                 </div>
