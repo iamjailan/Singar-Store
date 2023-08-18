@@ -5,6 +5,8 @@ import { RiArrowGoBackLine } from "react-icons/ri"
 import { FaLongArrowAltRight } from "react-icons/fa"
 import { useContext } from "react";
 import { ModeContext } from "../modeContext";
+import withReactContent from "sweetalert2-react-content";
+import Swal from "sweetalert2";
 
 export default function SingleCardPro(props, index){
     const location = useLocation()
@@ -22,6 +24,7 @@ export default function SingleCardPro(props, index){
         emptyCart,
         addItem,
     } = useCart()
+    const MySwal = withReactContent(Swal)
 
     const search = location.state?.search || ""
     const type = location.state?.type || "all"
@@ -39,11 +42,12 @@ export default function SingleCardPro(props, index){
             setCount(10)
         }
     }
-    function handleMessage() {
-        setDisplayMessage(prevMessage => !prevMessage)
-        setTimeout(() => {
-            setDisplayMessage(false) 
-        }, 1500)
+        
+    function handleAlert(){
+        MySwal.fire({
+            title: <strong>Item Added to the Bag!</strong>,
+            icon: 'success'
+            })
     }
 
     return (
@@ -66,7 +70,7 @@ export default function SingleCardPro(props, index){
                     </div>
                     <p className="single-text">{props.text}</p>
                     <div className="single-btn">
-                        <button className="add-to-cart" onClick={() => {addItem(props.item); handleMessage()}}>Add to Bag</button>
+                        <button className="add-to-cart" onClick={() => {addItem(props.item); handleAlert()}}>Add to Bag</button>
                     </div>
                     <div className="visit-my-bag">
                         {
@@ -75,9 +79,6 @@ export default function SingleCardPro(props, index){
                             </div> : null
                         }
                         <Link to="/bag" >Visit My Bag <FaLongArrowAltRight className="icon" /></Link>
-                        <div className={displayMessage ? "added-message" : "added-message hide"}>
-                            <h1>Item added to Bag</h1>
-                        </div>
                     </div>
                 </div>
             </main>
