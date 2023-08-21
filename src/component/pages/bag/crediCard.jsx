@@ -14,7 +14,7 @@ export default function CreditCard(){
     const value = inputValue
 
     function handleBuy(){
-        if(value.value){
+        if(value?.value){
             setTimeout( function () {
                 emptyCart()
             }, 3000)
@@ -23,7 +23,7 @@ export default function CreditCard(){
                 html: <i>We will deliver it to your home soon!</i>,
                 icon: 'success'
                 })
-        } else {
+        } if(!value?.value) {
             MySwal.fire({
                 title: <strong>Please Fill the payment!</strong>,
                 html: <i>Enter All of your information in the input's!!</i>,

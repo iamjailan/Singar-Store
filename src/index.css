@@ -2,3 +2,23 @@
     margin: 0;
     padding: 0;
 }
+.auth {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 65.6vh;
+    padding: 20px;
+}
+.auth input {
+    margin: 10px 0px;
+    padding: 10px 30px;
+}
+.auth button {
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    background-color: lime;
+    color: #fff;
+}

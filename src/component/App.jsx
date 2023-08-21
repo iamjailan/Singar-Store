@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import SharedLayout from "./pages/sharedLayout";
 import Home from "./pages/home";
 import Bag from "./pages/bag/bag";
-import Lists from "./pages/lists/lists";
+import Profile from "./pages/profile/profile";
 import Help from "./pages/help/help";
 import NotFound from "./pages/NotFound";
 import Product from "./pages/products/product-page";
@@ -14,18 +14,22 @@ import { CartProvider } from "react-use-cart";
 import HelpNavbar from "./pages/help/help-navbar";
 import About from "./pages/help/about";
 import Contact from "./pages/help/contact";
-import { ModeContext } from "./pages/modeContext"
+import { LoginState, ModeContext } from "./pages/modeContext"
 import Purchase from "./pages/bag/purchase";
 import CreditCard from "./pages/bag/crediCard";
 import AziPay from "./pages/bag/aziPay";
-import SharedBag from "./pages/bag/sharedLayout";
+import Auth from "./auth";
+import Login from "./pages/profile/login";
+import ProtectPage from "./pages/profile/ProtectPage";
 
 export default function App(){
     const [darkState, setDarkState] = React.useState(false)
+    const [login, setLogin] = React.useState(false)
     return (
         <>
         <BrowserRouter>
         <ModeContext.Provider value={{darkState, setDarkState}}>
+        <LoginState.Provider value={{login, setLogin}}>
             <CartProvider>
                 <Routes>
                     <Route path="/" element={<SharedLayout />}>
@@ -37,16 +41,25 @@ export default function App(){
                             <Route path="creditCard" element={<CreditCard />} />
                             <Route path="aziPay" element={<AziPay />} />
                         </Route>
-                        <Route path="lists" element={<Lists />} />
+                        <Route path="auth" element={<Auth />} />
                         <Route path="help" element={<HelpNavbar />}>
                             <Route index element={<Help />}/>
                             <Route path="about" element={<About />}/>
                             <Route path="contact" element={<Contact />}/>
                         </Route>
+                        <Route path="profile" element={
+                            <ProtectPage>
+                                <Profile />
+                            </ProtectPage>
+                        }>
+
+                        </Route>
+                        <Route path="login" element={<Login />} />
                         <Route path="*" element={<NotFound />} />
                     </Route>
                 </Routes>
             </CartProvider>
+        </LoginState.Provider>
         </ModeContext.Provider>
         </BrowserRouter>
         </>
