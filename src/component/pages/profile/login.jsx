@@ -4,7 +4,7 @@ import { LoginState, ModeContext } from "../modeContext";
 import { json, useNavigate } from "react-router-dom";
 export default function Login(){
     const { darkState } = useContext(ModeContext)
-    const { login, setLogin } = useContext(LoginState)
+    const { login, setLogin, loginError, setLoginError } = useContext(LoginState)
     const navigate = useNavigate()
     const [inputValue, setInputValue] = React.useState({
         email: "",
@@ -20,7 +20,12 @@ export default function Login(){
         })
     }
     function loginUser(){
-        if(!inputValue.email || !inputValue.password) return ;
+        if(!inputValue.email || !inputValue.password) return (
+            setLoginError(true),
+            setTimeout(() => {
+                setLoginError(false)
+            } ,2000)
+        );
         setLogin(true)
         navigate("/profile")
     }
@@ -29,8 +34,10 @@ export default function Login(){
         <section className={darkState ? "login dark" : "login"}>
             <h1 className="login-title">Login Here!</h1>
             <main className="login-inputs">
-                <input value={inputValue.email} name="email" onChange={changeValue} type="email"placeholder="Enter Your E-mail..." />
+                <input value={inputValue.email} name="email" onChange={changeValue} type="email" required placeholder="Enter Your E-mail..." />
+                {loginError ? <p className="red-error">Please Enter Your E-mail!</p> : null}
                 <input value={inputValue.password} name="password" onChange={changeValue} type="password"placeholder="Enter Your Password..." />
+                {loginError ? <p className="red-error">Please Enter Your Password!</p> : null}
                 <button onClick={() => loginUser()}>Login</button>
             </main>
         </section>

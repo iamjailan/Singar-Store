@@ -25,11 +25,12 @@ import ProtectPage from "./pages/profile/ProtectPage";
 export default function App(){
     const [darkState, setDarkState] = React.useState(false)
     const [login, setLogin] = React.useState(false)
+    const [ loginError, setLoginError ] = React.useState(false)
     return (
         <>
         <BrowserRouter>
         <ModeContext.Provider value={{darkState, setDarkState}}>
-        <LoginState.Provider value={{login, setLogin}}>
+        <LoginState.Provider value={{login, setLogin, loginError, setLoginError}}>
             <CartProvider>
                 <Routes>
                     <Route path="/" element={<SharedLayout />}>
