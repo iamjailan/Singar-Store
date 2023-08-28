@@ -1,13 +1,17 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { LoginState } from '../modeContext'
-import { Navigate } from 'react-router-dom'
+import { useNavigate, useNavigation } from 'react-router-dom'
 
 export default function ProtectPage({children}) {
-    const { login } = useContext(LoginState)
+    const { login, setLogin } = useContext(LoginState)
+    const isLoggedIn = localStorage.getItem("loginState")
+    const navigate = useNavigate()
+
     if(!login){
-        return (
-            <Navigate to="/login" />
-        )
+            return (
+                navigate("/login?please login first and the go!")
+            )
     }
-    return children
+    return children;
+
 }

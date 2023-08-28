@@ -14,7 +14,9 @@ export default function Navbar(){
     }
     const { totalItems } = useCart()
     const { setDarkState, darkState } = useContext(ModeContext)
-    const { login } = useContext(LoginState)
+    const { login, setLogin } = useContext(LoginState)
+    const isLoggedIn = localStorage.getItem("loginState")
+
 
     function toggleMode(){
         setDarkState(prevMode => !prevMode)
@@ -28,6 +30,7 @@ export default function Navbar(){
     useEffect(()=>{
         localStorage.setItem('darkState', darkState)
     }, [darkState])
+
     return (
         <>
             <nav className={darkState ? "navbar dark" : "navbar"}>
@@ -39,6 +42,7 @@ export default function Navbar(){
                         <NavLink to="bag" id="flex-bag" className={({isActive}) => isActive ? "active-links": null}><BsBagFill id="bag-icon" /> Bag<span className="nav-total">{totalItems === 0 ? null : totalItems}</span></NavLink>
                         {login ? <NavLink to="/profile" className={({isActive}) => isActive ? "active-links": null}>Profile</NavLink> : <NavLink to="/login" className={({isActive}) => isActive ? "active-links": null}>Login</NavLink>}
                         <NavLink to="/help" className={({isActive}) => isActive ? "active-links": null}>Help</NavLink>
+                        {login ? <NavLink to="/add-product" className={({isActive}) => isActive ? "active-links": null}>Add Product</NavLink> : null}
                         <NavLink onClick={toggleMode}>{ darkState ? <CiDark /> : <MdLightMode />}</NavLink>
                     </ul>
                 </div>
@@ -57,6 +61,7 @@ export default function Navbar(){
                             <NavLink to="bag" className={({isActive}) => isActive ? "active-links": null}><BsBagFill /> Bag<span className="nav-total">{totalItems === 0 ? null : totalItems}</span></NavLink>
                             {login ? <NavLink to="/profile" className={({isActive}) => isActive ? "active-links": null}>Profile</NavLink> : <NavLink to="/login" className={({isActive}) => isActive ? "active-links": null}>Login</NavLink>}
                             <NavLink to="/help" className={({isActive}) => isActive ? "active-links": null}>Help</NavLink>
+                            {login ? <NavLink to="/add-product" className={({isActive}) => isActive ? "active-links": null}>Add Product</NavLink> : null}
                             <NavLink onClick={toggleMode}>{ darkState ? <CiDark /> : <MdLightMode />}</NavLink>
                         </ul>
                     </div>

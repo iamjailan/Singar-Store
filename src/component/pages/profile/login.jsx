@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import "./index.css"
 import { LoginState, ModeContext } from "../modeContext";
-import { json, useNavigate } from "react-router-dom";
+import { json, redirect, useNavigate, useNavigation } from "react-router-dom";
 export default function Login(){
     const { darkState } = useContext(ModeContext)
     const { login, setLogin, loginError, setLoginError } = useContext(LoginState)
@@ -10,6 +10,7 @@ export default function Login(){
         email: "",
         password: ""
     })
+
     function changeValue(e){
         setInputValue(prevData => {
             const {value, name} = e.target;
@@ -26,8 +27,8 @@ export default function Login(){
                 setLoginError(false)
             } ,2000)
         );
-        setLogin(true)
         navigate("/profile")
+        setLogin(true)
     }
 
     return (

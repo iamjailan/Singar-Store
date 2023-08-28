@@ -21,11 +21,23 @@ import AziPay from "./pages/bag/aziPay";
 import Auth from "./auth";
 import Login from "./pages/profile/login";
 import ProtectPage from "./pages/profile/ProtectPage";
+import AddProduct from "./pages/addProduct/add-product";
 
 export default function App(){
     const [darkState, setDarkState] = React.useState(false)
     const [login, setLogin] = React.useState(false)
     const [ loginError, setLoginError ] = React.useState(false)
+
+    useEffect(() => {
+        const loginState = localStorage.getItem("loginState");
+        if(loginState){
+            setLogin(loginState === 'true')
+        }
+    }, [])
+    useEffect(()=>{
+        localStorage.setItem('loginState', login)
+    }, [login])
+
     return (
         <>
         <BrowserRouter>
@@ -55,7 +67,12 @@ export default function App(){
                         }>
 
                         </Route>
-                        <Route path="login" element={<Login />} />
+                        <Route path="login" element={login ? <Profile /> : <Login />} />
+                        <Route path="add-product" element={
+                            <ProtectPage>
+                                <AddProduct />
+                            </ProtectPage>
+                        } />
                         <Route path="*" element={<NotFound />} />
                     </Route>
                 </Routes>
