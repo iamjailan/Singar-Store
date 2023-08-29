@@ -67,9 +67,24 @@
 .dark .red-fill {
     color: red;
 }
+.dark .text-area {
+    color: #fff;
+    background-color: transparent;
+}
+.text-area {
+    min-height: 400px;
+    width: 400px;
+    resize: none;
+    margin-top: 40px;
+    padding: 10px;
+    outline: none;
+}
 @media screen and (max-width: 1024px){
     .add-product .add-form div {
         width: 350px;
+    }
+    .add-product .send-product {
+        margin-left: 55px;
     }
 }
 @media screen and (max-width: 768px){
@@ -80,6 +95,10 @@
     .add-product .add-product-title {
         font-size: 1.6rem;
     }
+    .add-product .text-area {
+        width: 300px;
+    }
+
 }
 @media screen and (max-width: 425px){
     .add-product .add-form div {

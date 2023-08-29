@@ -48,3 +48,9 @@
 .dark .red-error {
     color: red;
 }
+.login-sign-up h4 {
+    font-weight: 100;
+}
+.login-sign-up .sign-up {
+    color: rgba(0, 255, 0, 0.745);
+}

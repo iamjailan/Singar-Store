@@ -18,7 +18,7 @@ export default function AddProduct(){
         productRating: "",
         productReview: "",
         productFinal: "",
-        productDetail: "",
+        productDetails: "",
     })
 
     function sendInfo(){
@@ -102,17 +102,25 @@ export default function AddProduct(){
                         </section>
                     </div>
                     <div>
-                        <label>Product Details</label>
-                        <section>
-                            <input name="productDetail" onChange={handleChange} value={formData.productDetail} required placeholder="e. g. long then 100 line" type="text" />
-                            {isFilled ? <FillError cssClass="red-fill" text="Please enter details!" /> : null}
-                        </section>
-                    </div>
-                    <div>
                         <label>Product Final Price</label>
                         <section>
                             <input name="productFinal" onChange={handleChange} value={formData.productFinal} required placeholder="e. g. 200" className="number" type="number" />
                             {isFilled ? <FillError cssClass="red-fill" text="Please enter product final price!" /> : null}
+                        </section>
+                    </div>
+                    <div>
+
+                    </div>
+                    <div>
+                        <section>
+                        <textarea
+                            placeholder="Enter Product Details!"
+                            onChange={handleChange} 
+                            name="productDetails" 
+                            value={formData.productDetails}
+                            className="text-area"
+                             />
+                            {isFilled ? <FillError cssClass="red-fill" text="Please enter details!" /> : null}
                         </section>
                     </div>
                     <button className="send-product" type="submit" onClick={sendInfo}>Send to DataBase</button>
