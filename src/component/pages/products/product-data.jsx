@@ -2,7 +2,7 @@ export default [
     {
         id: 18,
         name: "Malangi Kochi Dress",
-        type: "afghani",
+        type: "Afghani",
         price: "760",
         image: "image/a-7.png",
         image1: "image/a-8.png",
@@ -15,7 +15,7 @@ export default [
     {
         id:1,
         name: "Winter Clothe",
-        type: "kids-cloth",
+        type: "Kids",
         price: "120",
         image: "image/k.png",
         image1: "image/k1.png",
@@ -28,7 +28,7 @@ export default [
     {
         id:2,
         name: "Winter Jacket",
-        type: "kids-cloth",
+        type: "Kids",
         price: "180",
         image: "image/kj.png",
         image1: "image/kj1.png",
@@ -41,7 +41,7 @@ export default [
     {
         id:3,
         name: "DELL",
-        type: "computers",
+        type: "Computer",
         price: "1299",
         image: "image/c-3.png",
         image1: "image/c-2.png",
@@ -54,7 +54,7 @@ export default [
     {
         id:4,
         name: "MacBook",
-        type: "computers",
+        type: "Computer",
         price: "4000",
         image: "image/c-4.png",
         image1: "image/c-5.png",
@@ -67,7 +67,7 @@ export default [
     {
         id:5,
         name: "Korean Winter Clothe",
-        type: "kids-cloth",
+        type: "Kids",
         price: "190",
         image: "image/k-4.png",
         image1: "image/k-5.png",
@@ -80,7 +80,7 @@ export default [
     {
         id:6,
         name: "iPhone",
-        type: "mobiles",
+        type: "Mobile",
         price: "1299",
         image: "image/m-1.png",
         image1: "image/m-2.png",
@@ -93,7 +93,7 @@ export default [
     {
         id:7,
         name: "A53",
-        type: "mobiles",
+        type: "Mobile",
         price: "700",
         image: "image/m-4.png",
         image1: "image/m-5.png",
@@ -106,7 +106,7 @@ export default [
     {
         id:8,
         name: "Vivo",
-        type: "mobiles",
+        type: "Mobile",
         price: "500",
         image: "image/m-7.png",
         image1: "image/m-8.png",
@@ -119,7 +119,7 @@ export default [
     {
         id:9,
         name: "Fruit Mixer",
-        type: "home-appliance",
+        type: "Home Appliance",
         price: "240",
         image: "image/h-1.png",
         image1: "image/h-2.png",
@@ -132,7 +132,7 @@ export default [
     {
         id:10,
         name: "Clothes Dryer",
-        type: "home-appliance",
+        type: "Home Appliance",
         price: "670",
         image: "image/h-4.png",
         image1: "image/h-5.png",
@@ -145,7 +145,7 @@ export default [
     {
         id:11,
         name: "Refrigerator",
-        type: "home-appliance",
+        type: "Home Appliance",
         price: "1000",
         image: "image/h-7.png",
         image1: "image/h-8.png",
@@ -158,7 +158,7 @@ export default [
     {
         id:12,
         name: "Office Desk",
-        type: "office-appliance",
+        type: "Office Appliance",
         price: "450",
         image: "image/o-1.png",
         image1: "image/o-2.png",
@@ -171,7 +171,7 @@ export default [
     {
         id:13,
         name: "Office Printer",
-        type: "office-appliance",
+        type: "Office Appliance",
         price: "300",
         image: "image/o-4.png",
         image1: "image/o-5.png",
@@ -184,7 +184,7 @@ export default [
     {
         id:14,
         name: "Desk Light",
-        type: "office-appliance",
+        type: "Office Appliance",
         price: "150",
         image: "image/o-7.png",
         image1: "image/o-8.png",
@@ -197,7 +197,7 @@ export default [
     {
         id:15,
         name: "Kochi Dress",
-        type: "afghani",
+        type: "Afghani",
         price: "330",
         image: "image/a-1.png",
         image1: "image/a-2.png",
@@ -210,7 +210,7 @@ export default [
     {
         id:16,
         name: "Magenta Kochi Dress",
-        type: "afghani",
+        type: "Afghani",
         price: "410",
         image: "image/a-4.png",
         image1: "image/a-5.png",
@@ -223,7 +223,7 @@ export default [
     {
         id:17,
         name: "Shampoo",
-        type: "other",
+        type: "Other",
         price: "80",
         image: "image/e-1.png",
         image1: "image/e-2.png",
@@ -236,7 +236,7 @@ export default [
     {
         id:19,
         name: "BiCycle",
-        type: "other",
+        type: "Other",
         price: "120",
         image: "c.png",
         image1: "c.png",

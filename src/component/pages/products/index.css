@@ -30,3 +30,91 @@
 .dark .product-edit-btn .btn-edit  {
     color: lime;
 }
+.find-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+.find-items input {
+    padding: 10px 30px;
+    outline: none;
+    border-radius: 25px;
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
+}
+.find-items h1 {
+    font-size: 3rem;
+}
+.find-items .find-icon {
+    padding: 10px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    border-radius: 25px;
+    margin-left: 5px;
+    color: #fff;
+    background-color: #000;
+    font-weight: 600;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
+}
+.find-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+}
+.dark .find-items .find-flex input {
+    background-color: transparent;
+    border: 1px solid  #fff;
+    box-shadow: 1px 2px 5px rgba(255, 255, 255, 0.4);
+}
+.dark .find-items .find-flex .find-icon {
+    background-color: #fff;
+    color: #000;
+    box-shadow: 1px 2px 5px rgba(255, 255, 255, 0.4);
+}
+.empty-search {
+    min-height: 30px;
+    margin: 30px;
+}
+.empty-search h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+.error {
+    font-size: .8rem;
+    color: red;
+}
+.dark .error {
+    color: red;
+}
+@media screen and (max-width: 1024px){
+    .find-items h1 {
+        font-size: 2rem;
+    }
+    .empty-search h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 768px){
+    .find-items h1 {
+        font-size: 1.5rem;
+    }
+    .empty-search h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 425px){
+    .find-items h1 {
+        font-size: 1rem;
+    }
+    .empty-search h1 {
+        font-size: 1rem;
+        text-align: center;
+    }
+}
