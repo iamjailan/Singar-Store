@@ -1,15 +1,12 @@
 import { initializeApp } from "firebase/app";
-import { getAuth, GoogleAuthProvider } from "firebase/auth"
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDXm3dEmobJl99wGz0arryBp0bjHlMd91Y",
-  authDomain: "singar-68db9.firebaseapp.com",
-  projectId: "singar-68db9",
-  storageBucket: "singar-68db9.appspot.com",
-  messagingSenderId: "941055434192",
-  appId: "1:941055434192:web:8d9265fa293a61cc01edd5"
+  apiKey: "AIzaSyAmjJ02vSy8BrTmLRHvVktj70obRZ5lXes",
+  authDomain: "singar-af463.firebaseapp.com",
+  projectId: "singar-af463",
+  storageBucket: "singar-af463.appspot.com",
+  messagingSenderId: "1079471235378",
+  appId: "1:1079471235378:web:68e16634930c3660ffb72b"
 };
 
 const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app)
-export const googleProvider = new GoogleAuthProvider()
