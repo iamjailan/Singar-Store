@@ -18,7 +18,6 @@ import { LoginState, ModeContext } from "./pages/modeContext"
 import Purchase from "./pages/bag/purchase";
 import CreditCard from "./pages/bag/crediCard";
 import AziPay from "./pages/bag/aziPay";
-import Auth from "./auth";
 import Login from "./pages/profile/login";
 import ProtectPage from "./pages/profile/ProtectPage";
 import AddProduct from "./pages/addProduct/add-product";
@@ -54,7 +53,6 @@ export default function App(){
                             <Route path="creditCard" element={<CreditCard />} />
                             <Route path="aziPay" element={<AziPay />} />
                         </Route>
-                        <Route path="auth" element={<Auth />} />
                         <Route path="help" element={<HelpNavbar />}>
                             <Route index element={<Help />}/>
                             <Route path="about" element={<About />}/>
