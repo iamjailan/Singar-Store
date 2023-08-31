@@ -35,7 +35,6 @@ a {
     width: 70px;
     justify-content: space-around;
     align-items: center;
-    height: 50px;
 }
 
 .footer {
@@ -61,7 +60,11 @@ a {
     font-size: 20px;
 }
 .active-links {
-    color: red;
+    color: rgb(64, 64, 255);
+    padding: 10px;
+    background-color: rgba(200, 200, 249, 0.4);
+    border-radius: 25px;
+    transition: all .5s;
 }
 .home-page {
     display: flex;
@@ -1063,7 +1066,8 @@ a {
     color: #fff;
 }
 .dark .active-links {
-    color: red;
+    background-color: rgba(7, 94, 245, 0.185);
+    border-radius: 25px;
 }
 .dark .home-page h1 {
     color: #000;
@@ -1136,6 +1140,9 @@ a {
     background-color: #fff;
     color: #000;
     font-weight: 600;
+}
+.dark .help-image section input {
+    background-color: transparent;
 }
 .dark ,.dark .navbar, .dark .navbar--mobile, .dark .navbar--mobile-height {
     background-color:  #151515;
@@ -1730,9 +1737,6 @@ a {
     font-size: 1.5rem;
     margin-bottom: 20px;
     background-color: transparent;
-}
-.active-links {
-    color: red;
 }
 
 @media screen and (max-width: 768px){

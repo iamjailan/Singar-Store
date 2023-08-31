@@ -13,7 +13,7 @@ export default function Product(){
                     <h1>Get 5% Cash</h1>
                     <h1>On every single Product</h1>
                     <p>From stylish fashion accessories to state-of-the-art gadgets, we have something for everyone. Browse through our collection and find the perfect item to enhance your lifestyle. Happy shopping!</p>
-                    <Link className="learn-btn" to="/help">Learn More</Link>
+                    <Link className="learn-btn" to="/help/about">About US</Link>
                 </div>
             </div>
             <main className="discount">
